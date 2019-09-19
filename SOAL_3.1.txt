@@ -1,0 +1,82 @@
+ db.createUser(
+... {
+... user: "Andi",
+... pwd: "anditopsecret",
+... roles: [ {role: "userAdminAnyDatabase", db: "admin" } ]
+... }
+... )
+
+db.createUser(
+... {
+... user: "Budi",
+... pwd: "buditopsecret",
+... roles: [ {role: "readWrite", db: "Kampus" } ]
+... }
+... )
+
+db.createCollection("Dosen")
+
+db.Dosen.insert(
+... {
+... "nama" : "Caca",
+... "usia" : NumberLong(28),
+... "asal" : "Jakarta",
+... "bidang" : "Fisika Astrologi",
+... "title" : "S2",
+... "status" : "Honorer",
+... "nip" : NumberLong(123),
+... "matkul" : [ "Metrologi", "Kosmologi", "Kalkulus" ]
+... }
+... {
+... "nama" : "Dedi",
+... "usia" : NumberLong(29),
+... "asal" : "Yogyakarta",
+... "bidang" : "Fisika Terapan",
+... "title" : "S3",
+... "status" : "PNS",
+... "nip" : NumberLong(456),
+... "matkul" : [ "Instrumentasi", "Elektronika", "Fisika Dasar" ]
+... }
+... {
+... "nama" : "Euis",
+... "usia" : NumberLong(30),
+... "asal" : "Bandung",
+... "bidang" : "Fisika Teoretik",
+... "title" : "S1",
+... "status" : "Honorer",
+... "nip" : NumberLong(789),
+... "matkul" : [ "Fisika Dasar", "Fisika Modern", "Kalkulus" ]
+}... 
+... )
+
+db.createCollection("Mahasiswa")
+
+db.Mahasiswa.insert(
+...{
+... "_id" : ObjectId("5d8354ad5b97db0a847c4fde"),
+... "nama" : "Faza",
+... "usia" : NumberLong(19),
+... "asal" : "Aceh",
+... "prodi" : "Fisika",
+... "angkatan" : NumberLong(2017),
+... "nim" : NumberLong(123)
+... }
+... {
+... "_id" : ObjectId("5d83552c31a9d50a841484a4"),
+... "nama" : "Gilang",
+... "usia" : NumberLong(20),
+... "asal" : "Semarang",
+... "prodi" : "Fisika",
+... "angkatan" : NumberLong(2017),
+... "nim" : NumberLong(456)
+... }
+... {
+... "_id" : ObjectId("5d83554b31a9d50a841484a5"),
+... "nama" : "Hanafi",
+... "usia" : NumberLong(19),
+... "asal" : "Makassar",
+... "prodi" : "Fisika",
+... "angkatan" : NumberLong(2017),
+... "nim" : NumberLong(789)
+... }
+... )
